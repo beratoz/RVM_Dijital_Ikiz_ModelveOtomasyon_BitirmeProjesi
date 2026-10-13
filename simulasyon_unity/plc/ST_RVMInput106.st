@@ -1,0 +1,54 @@
+TYPE ST_RVMInput106 :
+STRUCT
+    uiUnityProtokol : UINT := 106;
+    udiUnityOturumu : UDINT := 0;
+    udiUnitySayaci : UDINT := 0;
+    udiKomutKimligi : UDINT := 0;
+    uiOperatorKomutu : UINT := 0;
+    xGiris : BOOL := FALSE;
+    xTanima : BOOL := FALSE;
+    xKiriciGiris : BOOL := FALSE;
+    xKirildi : BOOL := FALSE;
+    xHazneDolu : BOOL := FALSE;
+    xBosaltildi : BOOL := FALSE;
+    xKapakAcik : BOOL := FALSE;
+    xKapakKapali : BOOL := FALSE;
+    xYolBos : BOOL := FALSE;
+    xMetalAlgilandi : BOOL := FALSE;
+    xSikisma : BOOL := FALSE;
+    xAcilStop : BOOL := FALSE;
+    xKutuPetDolu : BOOL := FALSE;
+    xKutuAluminyumDolu : BOOL := FALSE;
+    xKutuCamDolu : BOOL := FALSE;
+    rKutleGram : REAL := 0.0;
+    rOptikGecirgenlik : REAL := 0.0;
+    rBoyMetre : REAL := 0.0;
+    rHazneKonumu : REAL := 0.0;
+    rGercekBantHizi : REAL := 0.0;
+    rGercekKiriciDevri : REAL := 0.0;
+    uiBosaltilanKutu : UINT := 0;
+    udiUrunKimligi : UDINT := 0;
+    uiOperatorParametresi : UINT := 0;
+    udiGorulenPlcOturumu : UDINT := 0;
+    udiNesneOnayi : UDINT := 0;
+    uiNesneSonucu : UINT := 0;
+    udiNesneUrunKimligi : UDINT := 0;
+    uiPlantVeriKaynagi : UINT := 0;
+    xPlantVerisiGecerli : BOOL := FALSE;
+    udiGoruntuOnayi : UDINT := 0;
+    udiGoruntuUrunu : UDINT := 0;
+    udiGoruntuPlcOturumu : UDINT := 0;
+    udiGoruntuUnityOturumu : UDINT := 0;
+    xGoruntuGecerli : BOOL := FALSE;
+    xGoruntuNesneVar : BOOL := FALSE;
+    rGoruntuBoy : REAL := 0;
+    rGoruntuEn : REAL := 0;
+    rGoruntuDoluluk : REAL := 0;
+    rGoruntuYasiMs : REAL := 0;
+    xOlcumTartiGecerli : BOOL;
+    xOlcumProbGecerli : BOOL;
+    rOlcumYansima : REAL;
+    rOlcumMetal : REAL;
+    rOlcumManyetik : REAL;
+END_STRUCT
+END_TYPE

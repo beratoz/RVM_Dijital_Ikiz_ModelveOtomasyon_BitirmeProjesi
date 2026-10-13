@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.8.0.0" runtimeid="3.5.22.30" libversion="4.6.0.0" compiler="3.5.22.30" lmm="3.5.22.30" profile="CODESYS V3.5 SP22 Patch 3+" settings="SupportOPCUA, XmlIncludeComments, LayoutCalculator=CompatibilityClientSideLayoutCalculator" />
+    <ProjectInfo name="RVM_Unity_Dijital_Ikiz_v106" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL_RVMUnity">
+        <Node name="rBantHizi" type="T_REAL" access="Read" />
+        <Node name="rBoyMetre" type="T_REAL" access="ReadWrite" />
+        <Node name="rGercekBantHizi" type="T_REAL" access="ReadWrite" />
+        <Node name="rGercekKiriciDevri" type="T_REAL" access="ReadWrite" />
+        <Node name="rGoruntuBoy" type="T_REAL" access="ReadWrite" />
+        <Node name="rGoruntuDoluluk" type="T_REAL" access="ReadWrite" />
+        <Node name="rGoruntuEn" type="T_REAL" access="ReadWrite" />
+        <Node name="rGoruntuYasiMs" type="T_REAL" access="ReadWrite" />
+        <Node name="rHazneHedefi" type="T_REAL" access="Read" />
+        <Node name="rHazneHizi" type="T_REAL" access="Read" />
+        <Node name="rHazneKonumu" type="T_REAL" access="ReadWrite" />
+        <Node name="rKapakAcisi" type="T_REAL" access="Read" />
+        <Node name="rKiriciDevri" type="T_REAL" access="Read" />
+        <Node name="rKutleGram" type="T_REAL" access="ReadWrite" />
+        <Node name="rOlcumManyetik" type="T_REAL" access="ReadWrite" />
+        <Node name="rOlcumMetal" type="T_REAL" access="ReadWrite" />
+        <Node name="rOlcumYansima" type="T_REAL" access="ReadWrite" />
+        <Node name="rOptikGecirgenlik" type="T_REAL" access="ReadWrite" />
+        <Node name="udiAluminyumSayaci" type="T_UDINT" access="Read" />
+        <Node name="udiCamSayaci" type="T_UDINT" access="Read" />
+        <Node name="udiCikisBaslangic" type="T_UDINT" access="Read" />
+        <Node name="udiCikisBitis" type="T_UDINT" access="Read" />
+        <Node name="udiGirisBaslangic" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGirisBitis" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGirisOnayi" type="T_UDINT" access="Read" />
+        <Node name="udiGorulenPlcOturumu" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGoruntuIstegi" type="T_UDINT" access="Read" />
+        <Node name="udiGoruntuOnayi" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGoruntuPlcOturumu" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGoruntuUnityOturumu" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiGoruntuUrunu" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiIslemKimligi" type="T_UDINT" access="Read" />
+        <Node name="udiKomutKimligi" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiKomutOnayi" type="T_UDINT" access="Read" />
+        <Node name="udiNesneIstegi" type="T_UDINT" access="Read" />
+        <Node name="udiNesneOnayi" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiNesneUrunKimligi" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiPetSayaci" type="T_UDINT" access="Read" />
+        <Node name="udiPlcOperatorKomutKimligi" type="T_UDINT" access="Read" />
+        <Node name="udiPlcOturumu" type="T_UDINT" access="Read" />
+        <Node name="udiPlcSayaci" type="T_UDINT" access="Read" />
+        <Node name="udiReddedilenSayaci" type="T_UDINT" access="Read" />
+        <Node name="udiUnityOnayOturumu" type="T_UDINT" access="Read" />
+        <Node name="udiUnityOturumu" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiUnitySayaci" type="T_UDINT" access="ReadWrite" />
+        <Node name="udiUrunKimligi" type="T_UDINT" access="ReadWrite" />
+        <Node name="uiBosaltilanKutu" type="T_UINT" access="ReadWrite" />
+        <Node name="uiDesteklenenModlar" type="T_UINT" access="Read" />
+        <Node name="uiDurum" type="T_UINT" access="Read" />
+        <Node name="uiGoruntuKarari" type="T_UINT" access="Read" />
+        <Node name="uiHataKodu" type="T_UINT" access="Read" />
+        <Node name="uiHedefKutu" type="T_UINT" access="Read" />
+        <Node name="uiKomutDurumu" type="T_UINT" access="Read" />
+        <Node name="uiKomutNedeni" type="T_UINT" access="Read" />
+        <Node name="uiNesneProfili" type="T_UINT" access="Read" />
+        <Node name="uiNesneSonucu" type="T_UINT" access="ReadWrite" />
+        <Node name="uiOperatorKomutu" type="T_UINT" access="ReadWrite" />
+        <Node name="uiOperatorParametresi" type="T_UINT" access="ReadWrite" />
+        <Node name="uiPlantVeriKaynagi" type="T_UINT" access="ReadWrite" />
+        <Node name="uiPlcKomutDurumu" type="T_UINT" access="Read" />
+        <Node name="uiPlcKomutNedeni" type="T_UINT" access="Read" />
+        <Node name="uiPlcOperatorKomutu" type="T_UINT" access="Read" />
+        <Node name="uiProtokolSurumu" type="T_UINT" access="Read" />
+        <Node name="uiSonKomutKaynagi" type="T_UINT" access="Read" />
+        <Node name="uiTaninmisMalzeme" type="T_UINT" access="Read" />
+        <Node name="uiUnityProtokol" type="T_UINT" access="ReadWrite" />
+        <Node name="uiVeriModu" type="T_UINT" access="Read" />
+        <Node name="xAcilStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="xBosaltildi" type="T_BOOL" access="ReadWrite" />
+        <Node name="xCalismaIzni" type="T_BOOL" access="Read" />
+        <Node name="xGiris" type="T_BOOL" access="ReadWrite" />
+        <Node name="xGoruntuGecerli" type="T_BOOL" access="ReadWrite" />
+        <Node name="xGoruntuNesneVar" type="T_BOOL" access="ReadWrite" />
+        <Node name="xHazneDolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xHazneHareket" type="T_BOOL" access="Read" />
+        <Node name="xKapakAc" type="T_BOOL" access="Read" />
+        <Node name="xKapakAcik" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKapakKapali" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKiriciCalis" type="T_BOOL" access="Read" />
+        <Node name="xKiriciGiris" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKirildi" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKonveyorGeri" type="T_BOOL" access="Read" />
+        <Node name="xKonveyorIleri" type="T_BOOL" access="Read" />
+        <Node name="xKutuAluminyumDolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKutuCamDolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xKutuPetDolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="xMetalAlgilandi" type="T_BOOL" access="ReadWrite" />
+        <Node name="xNesneIstegiEtkin" type="T_BOOL" access="Read" />
+        <Node name="xOlcumProbGecerli" type="T_BOOL" access="ReadWrite" />
+        <Node name="xOlcumTartiGecerli" type="T_BOOL" access="ReadWrite" />
+        <Node name="xPlantVerisiGecerli" type="T_BOOL" access="ReadWrite" />
+        <Node name="xSikisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="xTanima" type="T_BOOL" access="ReadWrite" />
+        <Node name="xTanimaOnayi" type="T_BOOL" access="Read" />
+        <Node name="xYolBos" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

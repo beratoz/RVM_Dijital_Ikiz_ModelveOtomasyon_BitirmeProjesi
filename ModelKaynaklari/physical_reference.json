@@ -1,0 +1,29 @@
+[
+  {
+    "id": "B101",
+    "length_m": 0.213,
+    "diameter_m": 0.056,
+    "physical_mass_g": 28,
+    "render_alpha": 0.25,
+    "metallic": 0.0,
+    "note": "Physical asset setup and test truth only; never a sensor measurement or classification result"
+  },
+  {
+    "id": "B102",
+    "length_m": 0.247,
+    "diameter_m": 0.068,
+    "physical_mass_g": 235,
+    "render_alpha": 0.38,
+    "metallic": 0.0,
+    "note": "Physical asset setup and test truth only; never a sensor measurement or classification result"
+  },
+  {
+    "id": "B103",
+    "length_m": 0.127,
+    "diameter_m": 0.066,
+    "physical_mass_g": 17,
+    "render_alpha": 1.0,
+    "metallic": 1.0,
+    "note": "Physical asset setup and test truth only; never a sensor measurement or classification result"
+  }
+]

@@ -1,0 +1,1000 @@
+{
+  "version": 106,
+  "materials": {
+    "0": "Bilinmeyen",
+    "1": "PET",
+    "2": "Aluminyum",
+    "3": "Cam"
+  },
+  "binPositionsUnityX": {
+    "1": -0.23,
+    "2": -0.77,
+    "3": 0.31
+  },
+  "input": {
+    "uiUnityProtokol": "UINT",
+    "udiUnityOturumu": "UDINT",
+    "udiUnitySayaci": "UDINT",
+    "udiKomutKimligi": "UDINT",
+    "uiOperatorKomutu": "UINT",
+    "xGiris": "BOOL",
+    "xTanima": "BOOL",
+    "xKiriciGiris": "BOOL",
+    "xKirildi": "BOOL",
+    "xHazneDolu": "BOOL",
+    "xBosaltildi": "BOOL",
+    "xKapakAcik": "BOOL",
+    "xKapakKapali": "BOOL",
+    "xYolBos": "BOOL",
+    "xMetalAlgilandi": "BOOL",
+    "xSikisma": "BOOL",
+    "xAcilStop": "BOOL",
+    "xKutuPetDolu": "BOOL",
+    "xKutuAluminyumDolu": "BOOL",
+    "xKutuCamDolu": "BOOL",
+    "rKutleGram": "REAL",
+    "rOptikGecirgenlik": "REAL",
+    "rBoyMetre": "REAL",
+    "rHazneKonumu": "REAL",
+    "rGercekBantHizi": "REAL",
+    "rGercekKiriciDevri": "REAL",
+    "uiBosaltilanKutu": "UINT",
+    "udiUrunKimligi": "UDINT",
+    "uiOperatorParametresi": "UINT",
+    "udiGorulenPlcOturumu": "UDINT",
+    "udiNesneOnayi": "UDINT",
+    "uiNesneSonucu": "UINT",
+    "udiNesneUrunKimligi": "UDINT",
+    "uiPlantVeriKaynagi": "UINT",
+    "xPlantVerisiGecerli": "BOOL",
+    "udiGoruntuOnayi": "UDINT",
+    "udiGoruntuUrunu": "UDINT",
+    "udiGoruntuPlcOturumu": "UDINT",
+    "udiGoruntuUnityOturumu": "UDINT",
+    "xGoruntuGecerli": "BOOL",
+    "xGoruntuNesneVar": "BOOL",
+    "rGoruntuBoy": "REAL",
+    "rGoruntuEn": "REAL",
+    "rGoruntuDoluluk": "REAL",
+    "rGoruntuYasiMs": "REAL",
+    "xOlcumTartiGecerli": "BOOL",
+    "xOlcumProbGecerli": "BOOL",
+    "rOlcumYansima": "REAL",
+    "rOlcumMetal": "REAL",
+    "rOlcumManyetik": "REAL"
+  },
+  "output": {
+    "uiProtokolSurumu": "UINT",
+    "udiPlcSayaci": "UDINT",
+    "udiUnityOnayOturumu": "UDINT",
+    "udiGirisOnayi": "UDINT",
+    "udiKomutOnayi": "UDINT",
+    "udiIslemKimligi": "UDINT",
+    "uiDurum": "UINT",
+    "uiHataKodu": "UINT",
+    "uiTaninmisMalzeme": "UINT",
+    "uiHedefKutu": "UINT",
+    "xCalismaIzni": "BOOL",
+    "xKonveyorIleri": "BOOL",
+    "xKonveyorGeri": "BOOL",
+    "xKiriciCalis": "BOOL",
+    "xHazneHareket": "BOOL",
+    "xKapakAc": "BOOL",
+    "xTanimaOnayi": "BOOL",
+    "rBantHizi": "REAL",
+    "rKiriciDevri": "REAL",
+    "rHazneHizi": "REAL",
+    "rHazneHedefi": "REAL",
+    "rKapakAcisi": "REAL",
+    "udiPetSayaci": "UDINT",
+    "udiAluminyumSayaci": "UDINT",
+    "udiCamSayaci": "UDINT",
+    "udiReddedilenSayaci": "UDINT",
+    "udiPlcOturumu": "UDINT",
+    "uiKomutDurumu": "UINT",
+    "uiKomutNedeni": "UINT",
+    "udiPlcOperatorKomutKimligi": "UDINT",
+    "uiPlcOperatorKomutu": "UINT",
+    "uiPlcKomutDurumu": "UINT",
+    "uiPlcKomutNedeni": "UINT",
+    "uiSonKomutKaynagi": "UINT",
+    "udiNesneIstegi": "UDINT",
+    "uiNesneProfili": "UINT",
+    "xNesneIstegiEtkin": "BOOL",
+    "uiVeriModu": "UINT",
+    "uiDesteklenenModlar": "UINT",
+    "udiCikisBaslangic": "UDINT",
+    "udiCikisBitis": "UDINT",
+    "udiGoruntuIstegi": "UDINT",
+    "uiGoruntuKarari": "UINT"
+  },
+  "metadata": {
+    "uiUnityProtokol": {
+      "limits": [
+        106,
+        106
+      ],
+      "allowed_values": [
+        106
+      ],
+      "unit": "code"
+    },
+    "udiUnityOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiUnitySayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiKomutKimligi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "uiOperatorKomutu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unit": "code"
+    },
+    "xGiris": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xTanima": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKiriciGiris": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKirildi": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xHazneDolu": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xBosaltildi": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKapakAcik": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKapakKapali": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xYolBos": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xMetalAlgilandi": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xSikisma": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xAcilStop": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKutuPetDolu": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKutuAluminyumDolu": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKutuCamDolu": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "rKutleGram": {
+      "limits": [
+        0,
+        10000
+      ],
+      "allowed_values": null,
+      "unit": "g"
+    },
+    "rOptikGecirgenlik": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "ratio"
+    },
+    "rBoyMetre": {
+      "limits": [
+        0,
+        2
+      ],
+      "allowed_values": null,
+      "unit": "m"
+    },
+    "rHazneKonumu": {
+      "limits": [
+        -0.77,
+        0.31
+      ],
+      "allowed_values": null,
+      "unit": "m"
+    },
+    "rGercekBantHizi": {
+      "limits": [
+        -1.2,
+        1.2
+      ],
+      "allowed_values": null,
+      "unit": "m/s"
+    },
+    "rGercekKiriciDevri": {
+      "limits": [
+        0,
+        180
+      ],
+      "allowed_values": null,
+      "unit": "rpm"
+    },
+    "uiBosaltilanKutu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unit": "code"
+    },
+    "udiUrunKimligi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "uiProtokolSurumu": {
+      "limits": [
+        106,
+        106
+      ],
+      "allowed_values": [
+        106
+      ],
+      "unit": "code"
+    },
+    "udiPlcSayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiUnityOnayOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiGirisOnayi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiKomutOnayi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiIslemKimligi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "uiDurum": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        900
+      ],
+      "unit": "code"
+    },
+    "uiHataKodu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313
+      ],
+      "unit": "code"
+    },
+    "uiTaninmisMalzeme": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unit": "code"
+    },
+    "uiHedefKutu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unit": "code"
+    },
+    "xCalismaIzni": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKonveyorIleri": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKonveyorGeri": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKiriciCalis": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xHazneHareket": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xKapakAc": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "xTanimaOnayi": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "rBantHizi": {
+      "limits": [
+        0,
+        1.2
+      ],
+      "allowed_values": null,
+      "unit": "m/s"
+    },
+    "rKiriciDevri": {
+      "limits": [
+        0,
+        180
+      ],
+      "allowed_values": null,
+      "unit": "rpm"
+    },
+    "rHazneHizi": {
+      "limits": [
+        0,
+        1.5
+      ],
+      "allowed_values": null,
+      "unit": "m/s"
+    },
+    "rHazneHedefi": {
+      "limits": [
+        -0.77,
+        0.31
+      ],
+      "allowed_values": null,
+      "unit": "m"
+    },
+    "rKapakAcisi": {
+      "limits": [
+        0,
+        75
+      ],
+      "allowed_values": null,
+      "unit": "degree"
+    },
+    "udiPetSayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiAluminyumSayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiCamSayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiReddedilenSayaci": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "counter/id"
+    },
+    "udiGirisBaslangic": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "sequence"
+    },
+    "udiGirisBitis": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "sequence"
+    },
+    "uiOperatorParametresi": {
+      "limits": [
+        0,
+        3
+      ],
+      "allowed_values": null,
+      "unit": "code"
+    },
+    "udiGorulenPlcOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "udiNesneOnayi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "uiNesneSonucu": {
+      "limits": [
+        0,
+        2
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2
+      ],
+      "unit": "code"
+    },
+    "udiNesneUrunKimligi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "uiPlantVeriKaynagi": {
+      "limits": [
+        0,
+        2
+      ],
+      "allowed_values": [
+        0,
+        1
+      ],
+      "unit": "code"
+    },
+    "xPlantVerisiGecerli": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "udiPlcOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "uiKomutDurumu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unit": "code"
+    },
+    "uiKomutNedeni": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "unit": "code"
+    },
+    "udiPlcOperatorKomutKimligi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "uiPlcOperatorKomutu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unit": "code"
+    },
+    "uiPlcKomutDurumu": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unit": "code"
+    },
+    "uiPlcKomutNedeni": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "unit": "code"
+    },
+    "uiSonKomutKaynagi": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2
+      ],
+      "unit": "code"
+    },
+    "udiNesneIstegi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "id"
+    },
+    "uiNesneProfili": {
+      "limits": [
+        0,
+        65535
+      ],
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unit": "code"
+    },
+    "xNesneIstegiEtkin": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "bool"
+    },
+    "uiVeriModu": {
+      "limits": [
+        1,
+        1
+      ],
+      "allowed_values": [
+        1
+      ],
+      "unit": "code"
+    },
+    "uiDesteklenenModlar": {
+      "limits": [
+        2,
+        2
+      ],
+      "allowed_values": [
+        2
+      ],
+      "unit": "bitmask"
+    },
+    "udiCikisBaslangic": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "sequence"
+    },
+    "udiCikisBitis": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "sequence"
+    },
+    "udiGoruntuOnayi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "udiGoruntuUrunu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "udiGoruntuPlcOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "udiGoruntuUnityOturumu": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "xGoruntuGecerli": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "xGoruntuNesneVar": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "rGoruntuBoy": {
+      "limits": [
+        0,
+        2
+      ],
+      "allowed_values": null,
+      "unit": "m"
+    },
+    "rGoruntuEn": {
+      "limits": [
+        0,
+        2
+      ],
+      "allowed_values": null,
+      "unit": "m"
+    },
+    "rGoruntuDoluluk": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "ratio"
+    },
+    "rGoruntuYasiMs": {
+      "limits": [
+        0,
+        1000000
+      ],
+      "allowed_values": null,
+      "unit": "ms"
+    },
+    "udiGoruntuIstegi": {
+      "limits": [
+        0,
+        4294967295
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "uiGoruntuKarari": {
+      "limits": [
+        0,
+        5
+      ],
+      "allowed_values": null,
+      "unit": "1"
+    },
+    "xOlcumTartiGecerli": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "valid"
+    },
+    "xOlcumProbGecerli": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "valid"
+    },
+    "rOlcumYansima": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "index"
+    },
+    "rOlcumMetal": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "index"
+    },
+    "rOlcumManyetik": {
+      "limits": [
+        0,
+        1
+      ],
+      "allowed_values": null,
+      "unit": "index"
+    }
+  }
+}

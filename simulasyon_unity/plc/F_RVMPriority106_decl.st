@@ -1,0 +1,4 @@
+FUNCTION F_RVMPriority106 : UINT
+VAR_INPUT
+    code : UINT;
+END_VAR
