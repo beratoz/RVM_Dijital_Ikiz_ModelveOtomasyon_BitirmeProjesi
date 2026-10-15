@@ -1,0 +1,25 @@
+﻿id;group;title;material;total_mass_g;empty_mass_g;contents_mass_g;nominal_capacity_ml;actual_dimensions_mm;expected_accept;rejection_reason;mass_basis;blend;glb;obj
+P01;PET;Su 330 ml;PET;14;14;0;330;[60.4, 60.4, 165.0];True;;Generic estimated test mass, not weighed specimen;blend/P01_water.blend;glb/P01_water.glb;obj/P01_water.obj
+P02;PET;Su 500 ml;PET;16;16;0;500;[65.4, 65.4, 210.0];True;;Generic estimated test mass, not weighed specimen;blend/P02_water.blend;glb/P02_water.glb;obj/P02_water.obj
+P03;PET;Maden suyu 750 ml;PET;24;24;0;750;[73.4, 73.4, 250.0];True;;Generic estimated test mass, not weighed specimen;blend/P03_water.blend;glb/P03_water.glb;obj/P03_water.obj
+P04;PET;Gazoz 1 litre;PET;34;34;0;1000;[81.4, 81.4, 275.0];True;;Generic estimated test mass, not weighed specimen;blend/P04_soda.blend;glb/P04_soda.glb;obj/P04_soda.obj
+P05;PET;Gazli icecek 1.5 litre;PET;42;42;0;1500;[89.4, 89.4, 320.0];True;;Generic estimated test mass, not weighed specimen;blend/P05_soda.blend;glb/P05_soda.glb;obj/P05_soda.obj
+P06;PET;Meyve suyu 250 ml;PET;20;20;0;250;[58.4, 58.4, 140.0];True;;Generic estimated test mass, not weighed specimen;blend/P06_juice.blend;glb/P06_juice.glb;obj/P06_juice.obj
+A01;ALU;Mini kutu 150 ml;ALUMINUM;9;9;0;150;[53.16, 53.16, 88.0];True;;Generic estimated test mass, not weighed specimen;blend/A01_can.blend;glb/A01_can.glb;obj/A01_can.obj
+A02;ALU;Slim kutu 250 ml;ALUMINUM;11;11;0;250;[53.16, 53.16, 134.0];True;;Generic estimated test mass, not weighed specimen;blend/A02_can.blend;glb/A02_can.glb;obj/A02_can.obj
+A03;ALU;Standart kutu 330 ml;ALUMINUM;13;13;0;330;[66.16, 66.16, 115.2];True;;Generic estimated test mass, not weighed specimen;blend/A03_can.blend;glb/A03_can.glb;obj/A03_can.obj
+A04;ALU;Sleek kutu 330 ml;ALUMINUM;12.5;12.5;0;330;[58.16, 58.16, 145.0];True;;Generic estimated test mass, not weighed specimen;blend/A04_can.blend;glb/A04_can.glb;obj/A04_can.obj
+A05;ALU;Standart kutu 355 ml;ALUMINUM;13.5;13.5;0;355;[66.16, 66.16, 122.0];True;;Generic estimated test mass, not weighed specimen;blend/A05_can.blend;glb/A05_can.glb;obj/A05_can.obj
+A06;ALU;Uzun kutu 500 ml;ALUMINUM;16;16;0;500;[66.16, 66.16, 168.0];True;;Generic estimated test mass, not weighed specimen;blend/A06_can.blend;glb/A06_can.glb;obj/A06_can.obj
+G01;GLASS;Yesil soda 200 ml;SODA_LIME_GLASS;180;180;0;200;[55.4, 55.4, 180.0];True;;Generic estimated test mass, not weighed specimen;blend/G01_glass.blend;glb/G01_glass.glb;obj/G01_glass.obj
+G02;GLASS;Seffaf icecek 250 ml;SODA_LIME_GLASS;200;200;0;250;[60.4, 60.4, 200.0];True;;Generic estimated test mass, not weighed specimen;blend/G02_glass.blend;glb/G02_glass.glb;obj/G02_glass.obj
+G03;GLASS;Amber longneck 330 ml;SODA_LIME_GLASS;205;205;0;330;[61.4, 61.4, 226.0];True;;205 g / 260 g generic target informed by Vetropack catalogue, not weighed specimen;blend/G03_glass.blend;glb/G03_glass.glb;obj/G03_glass.obj
+G04;GLASS;Amber sise 500 ml;SODA_LIME_GLASS;260;260;0;500;[67.4, 67.4, 264.0];True;;205 g / 260 g generic target informed by Vetropack catalogue, not weighed specimen;blend/G04_glass.blend;glb/G04_glass.glb;obj/G04_glass.obj
+G05;GLASS;Yesil uzun sise 750 ml;SODA_LIME_GLASS;400;400;0;750;[76.4, 76.4, 300.0];True;;Generic estimated test mass, not weighed specimen;blend/G05_wine.blend;glb/G05_wine.glb;obj/G05_wine.obj
+G06;GLASS;Genis agiz meyve 330 ml;SODA_LIME_GLASS;160;160;0;330;[65.4, 65.4, 170.0];True;;Generic estimated test mass, not weighed specimen;blend/G06_jar.blend;glb/G06_jar.glb;obj/G06_jar.obj
+R01;REJECT;HDPE deterjan sisesi;HDPE;55;55;0;500;[84.0, 45.1, 179.0];False;"HDPE; icecek PET ambalaji degil";Generic estimated test mass, not weighed specimen;blend/R01_detergent.blend;glb/R01_detergent.glb;obj/R01_detergent.obj
+R02;REJECT;Celik konserve;STEEL;48;48;0;400;[74.3, 74.3, 110.0];False;"Ferromanyetik celik; aluminyum degil";Generic estimated test mass, not weighed specimen;blend/R02_steel.blend;glb/R02_steel.glb;obj/R02_steel.obj
+R03;REJECT;Kesilmis yarim PET;PET;7;7;0;0;[65.0, 65.0, 105.0];False;Kesilmis, butunlugu bozulmus PET sise;"Estimated remaining fragment mass; not a measured specimen";blend/R03_half_pet.blend;glb/R03_half_pet.glb;obj/R03_half_pet.obj
+R04;REJECT;Kirik cam sise;GLASS;160;160;0;0;[61.0, 61.0, 197.25];False;Kirli olmayan ancak kirik, keskin kenarli cam sise;"Estimated remaining fragment mass; not a measured specimen";blend/R04_broken_glass.blend;glb/R04_broken_glass.glb;obj/R04_broken_glass.obj
+R05;REJECT;250 ml sivi kalan PET;PET;266;16;250;500;[65.4, 65.4, 210.0];False;Bos degil: 250 ml su kalintisi, ilave 250 g;16 g estimated empty bottle + 250 g water approximation (1 g/ml);blend/R05_water.blend;glb/R05_water.glb;obj/R05_water.obj
+R06;REJECT;Asiri ezilmis aluminyum;ALUMINUM;13;13;0;330;[84.0, 62.0, 43.0];False;Bu test politikasinda agir deformasyon / okunamaz etiket;13 g, mass preserved from A03 before geometric crushing;blend/R06_crushed.blend;glb/R06_crushed.glb;obj/R06_crushed.obj

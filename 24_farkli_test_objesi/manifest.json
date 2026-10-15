@@ -1,0 +1,1114 @@
+[
+  {
+    "id": "P01",
+    "group": "PET",
+    "title": "Su 330 ml",
+    "shape": "water",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 60,
+    "target_height_mm": 165,
+    "total_mass_g": 14,
+    "empty_mass_g": 14,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      35,
+      124,
+      182
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      60.4,
+      60.4,
+      165.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.014000000432133675,
+    "blend": "blend/P01_water.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.08250000327825546
+    ]
+  },
+  {
+    "id": "P02",
+    "group": "PET",
+    "title": "Su 500 ml",
+    "shape": "water",
+    "nominal_capacity_ml": 500,
+    "target_diameter_mm": 65,
+    "target_height_mm": 210,
+    "total_mass_g": 16,
+    "empty_mass_g": 16,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      38,
+      152,
+      175
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      65.4,
+      65.4,
+      210.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.01600000075995922,
+    "blend": "blend/P02_water.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.10499999672174454
+    ]
+  },
+  {
+    "id": "P03",
+    "group": "PET",
+    "title": "Maden suyu 750 ml",
+    "shape": "water",
+    "nominal_capacity_ml": 750,
+    "target_diameter_mm": 73,
+    "target_height_mm": 250,
+    "total_mass_g": 24,
+    "empty_mass_g": 24,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "green",
+    "color": [
+      21,
+      103,
+      71
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      73.4,
+      73.4,
+      250.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.024000000208616257,
+    "blend": "blend/P03_water.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.125
+    ]
+  },
+  {
+    "id": "P04",
+    "group": "PET",
+    "title": "Gazoz 1 litre",
+    "shape": "soda",
+    "nominal_capacity_ml": 1000,
+    "target_diameter_mm": 81,
+    "target_height_mm": 275,
+    "total_mass_g": 34,
+    "empty_mass_g": 34,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      213,
+      110,
+      33
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      81.4,
+      81.4,
+      275.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.03400000184774399,
+    "blend": "blend/P04_soda.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.13750000298023224
+    ]
+  },
+  {
+    "id": "P05",
+    "group": "PET",
+    "title": "Gazli icecek 1.5 litre",
+    "shape": "soda",
+    "nominal_capacity_ml": 1500,
+    "target_diameter_mm": 89,
+    "target_height_mm": 320,
+    "total_mass_g": 42,
+    "empty_mass_g": 42,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "green",
+    "color": [
+      162,
+      37,
+      42
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      89.4,
+      89.4,
+      320.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.041999999433755875,
+    "blend": "blend/P05_soda.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.1599999964237213
+    ]
+  },
+  {
+    "id": "P06",
+    "group": "PET",
+    "title": "Meyve suyu 250 ml",
+    "shape": "juice",
+    "nominal_capacity_ml": 250,
+    "target_diameter_mm": 58,
+    "target_height_mm": 140,
+    "total_mass_g": 20,
+    "empty_mass_g": 20,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      211,
+      144,
+      31
+    ],
+    "expected_accept": true,
+    "expected_bin": "PET",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.35,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.pcinternational.com/catalog/more-bottles/500-ml-beverage-bottle-28-mm-pco-1810-pet-round/",
+      "https://www.habibindustries.net/product/details/8/pet-dairy-bottle"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      58.4,
+      58.4,
+      140.0
+    ],
+    "mesh_vertices": 9476,
+    "mesh_polygons": 9526,
+    "mass_kg": 0.019999999552965164,
+    "blend": "blend/P06_juice.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.07000000029802322
+    ]
+  },
+  {
+    "id": "A01",
+    "group": "ALU",
+    "title": "Mini kutu 150 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 150,
+    "target_diameter_mm": 53,
+    "target_height_mm": 88,
+    "total_mass_g": 9,
+    "empty_mass_g": 9,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      166,
+      53,
+      66
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      53.16,
+      53.16,
+      88.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.008999999612569809,
+    "blend": "blend/A01_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.04399999976158142
+    ]
+  },
+  {
+    "id": "A02",
+    "group": "ALU",
+    "title": "Slim kutu 250 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 250,
+    "target_diameter_mm": 53,
+    "target_height_mm": 134,
+    "total_mass_g": 11,
+    "empty_mass_g": 11,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      38,
+      59,
+      88
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      53.16,
+      53.16,
+      134.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.010999999940395355,
+    "blend": "blend/A02_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.06700000166893005
+    ]
+  },
+  {
+    "id": "A03",
+    "group": "ALU",
+    "title": "Standart kutu 330 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 66,
+    "target_height_mm": 115.2,
+    "total_mass_g": 13,
+    "empty_mass_g": 13,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      188,
+      53,
+      42
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "66 x 115.2 mm format from Crown; model detail generic",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      66.16,
+      66.16,
+      115.2
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.013000000268220901,
+    "blend": "blend/A03_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.0575999990105629
+    ]
+  },
+  {
+    "id": "A04",
+    "group": "ALU",
+    "title": "Sleek kutu 330 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 58,
+    "target_height_mm": 145,
+    "total_mass_g": 12.5,
+    "empty_mass_g": 12.5,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      37,
+      129,
+      141
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      58.16,
+      58.16,
+      145.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.012500000186264515,
+    "blend": "blend/A04_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.07249999791383743
+    ]
+  },
+  {
+    "id": "A05",
+    "group": "ALU",
+    "title": "Standart kutu 355 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 355,
+    "target_diameter_mm": 66,
+    "target_height_mm": 122,
+    "total_mass_g": 13.5,
+    "empty_mass_g": 13.5,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      89,
+      100,
+      45
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      66.16,
+      66.16,
+      122.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.013500000350177288,
+    "blend": "blend/A05_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.061000000685453415
+    ]
+  },
+  {
+    "id": "A06",
+    "group": "ALU",
+    "title": "Uzun kutu 500 ml",
+    "shape": "can",
+    "nominal_capacity_ml": 500,
+    "target_diameter_mm": 66,
+    "target_height_mm": 168,
+    "total_mass_g": 16,
+    "empty_mass_g": 16,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      192,
+      134,
+      47
+    ],
+    "expected_accept": true,
+    "expected_bin": "ALU",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.3,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://www.crowncork.com/beverage-packaging/products/beverage-cans/113oz-330ml-standard",
+      "https://www.ardaghmetalpackaging.com/regions/europe/our-markets"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      66.16,
+      66.16,
+      168.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.01600000075995922,
+    "blend": "blend/A06_can.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.08399999886751175
+    ]
+  },
+  {
+    "id": "G01",
+    "group": "GLASS",
+    "title": "Yesil soda 200 ml",
+    "shape": "glass",
+    "nominal_capacity_ml": 200,
+    "target_diameter_mm": 55,
+    "target_height_mm": 180,
+    "total_mass_g": 180,
+    "empty_mass_g": 180,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "green",
+    "color": [
+      47,
+      107,
+      72
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      55.4,
+      55.4,
+      180.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.18000000715255737,
+    "blend": "blend/G01_glass.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.09000000357627869
+    ]
+  },
+  {
+    "id": "G02",
+    "group": "GLASS",
+    "title": "Seffaf icecek 250 ml",
+    "shape": "glass",
+    "nominal_capacity_ml": 250,
+    "target_diameter_mm": 60,
+    "target_height_mm": 200,
+    "total_mass_g": 200,
+    "empty_mass_g": 200,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "clear",
+    "color": [
+      36,
+      132,
+      161
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      60.4,
+      60.4,
+      200.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.20000000298023224,
+    "blend": "blend/G02_glass.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.10000000149011612
+    ]
+  },
+  {
+    "id": "G03",
+    "group": "GLASS",
+    "title": "Amber longneck 330 ml",
+    "shape": "glass",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 61,
+    "target_height_mm": 226,
+    "total_mass_g": 205,
+    "empty_mass_g": 205,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "amber",
+    "color": [
+      178,
+      115,
+      42
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "205 g / 260 g generic target informed by Vetropack catalogue, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      61.4,
+      61.4,
+      226.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.20499999821186066,
+    "blend": "blend/G03_glass.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.11299999803304672
+    ]
+  },
+  {
+    "id": "G04",
+    "group": "GLASS",
+    "title": "Amber sise 500 ml",
+    "shape": "glass",
+    "nominal_capacity_ml": 500,
+    "target_diameter_mm": 67,
+    "target_height_mm": 264,
+    "total_mass_g": 260,
+    "empty_mass_g": 260,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "amber",
+    "color": [
+      105,
+      48,
+      42
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "205 g / 260 g generic target informed by Vetropack catalogue, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      67.4,
+      67.4,
+      264.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.25999999046325684,
+    "blend": "blend/G04_glass.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.13199999928474426
+    ]
+  },
+  {
+    "id": "G05",
+    "group": "GLASS",
+    "title": "Yesil uzun sise 750 ml",
+    "shape": "wine",
+    "nominal_capacity_ml": 750,
+    "target_diameter_mm": 76,
+    "target_height_mm": 300,
+    "total_mass_g": 400,
+    "empty_mass_g": 400,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "green",
+    "color": [
+      58,
+      74,
+      47
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      76.4,
+      76.4,
+      300.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.4000000059604645,
+    "blend": "blend/G05_wine.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.15000000596046448
+    ]
+  },
+  {
+    "id": "G06",
+    "group": "GLASS",
+    "title": "Genis agiz meyve 330 ml",
+    "shape": "jar",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 65,
+    "target_height_mm": 170,
+    "total_mass_g": 160,
+    "empty_mass_g": 160,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "SODA_LIME_GLASS",
+    "tint": "clear",
+    "color": [
+      192,
+      118,
+      36
+    ],
+    "expected_accept": true,
+    "expected_bin": "GLASS",
+    "rejection_reason": "",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.45,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [
+      "https://katalog.vetropack.com/",
+      "https://www.vetropack.com/fileadmin/doc/01_publications/04_Brochures/leichtglas_en.pdf"
+    ],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      65.4,
+      65.4,
+      170.0
+    ],
+    "mesh_vertices": 3522,
+    "mesh_polygons": 3488,
+    "mass_kg": 0.1599999964237213,
+    "blend": "blend/G06_jar.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.08500000089406967
+    ]
+  },
+  {
+    "id": "R01",
+    "group": "REJECT",
+    "title": "HDPE deterjan sisesi",
+    "shape": "detergent",
+    "nominal_capacity_ml": 500,
+    "target_diameter_mm": 72,
+    "target_height_mm": 180,
+    "total_mass_g": 55,
+    "empty_mass_g": 55,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "HDPE",
+    "tint": "hdpe",
+    "color": [
+      119,
+      80,
+      161
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "HDPE; icecek PET ambalaji degil",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.5,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      84.0,
+      45.1,
+      179.0
+    ],
+    "mesh_vertices": 756,
+    "mesh_polygons": 871,
+    "mass_kg": 0.054999999701976776,
+    "blend": "blend/R01_detergent.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.08950000256299973
+    ]
+  },
+  {
+    "id": "R02",
+    "group": "REJECT",
+    "title": "Celik konserve",
+    "shape": "steel",
+    "nominal_capacity_ml": 400,
+    "target_diameter_mm": 73,
+    "target_height_mm": 110,
+    "total_mass_g": 48,
+    "empty_mass_g": 48,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "STEEL",
+    "tint": "metal",
+    "color": [
+      62,
+      104,
+      66
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "Ferromanyetik celik; aluminyum degil",
+    "mass_basis": "Generic estimated test mass, not weighed specimen",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.5,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      74.3,
+      74.3,
+      110.0
+    ],
+    "mesh_vertices": 5894,
+    "mesh_polygons": 5984,
+    "mass_kg": 0.04800000041723251,
+    "blend": "blend/R02_steel.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.054999999701976776
+    ]
+  },
+  {
+    "id": "R03",
+    "group": "REJECT",
+    "title": "Kesilmis yarim PET",
+    "shape": "half_pet",
+    "nominal_capacity_ml": 0,
+    "target_diameter_mm": 65.0,
+    "target_height_mm": 105.0,
+    "total_mass_g": 7,
+    "empty_mass_g": 7,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      203,
+      123,
+      47
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "Kesilmis, butunlugu bozulmus PET sise",
+    "mass_basis": "Estimated remaining fragment mass; not a measured specimen",
+    "dimensions_basis": "Designed damaged-container test geometry; no rated capacity",
+    "friction": 0.3499999940395355,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      65.0,
+      65.0,
+      105.0
+    ],
+    "mesh_vertices": 1920,
+    "mesh_polygons": 1824,
+    "mass_kg": 0.007,
+    "blend": "blend/R03_half_pet.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.05249999836087227
+    ],
+    "source_container_capacity_ml": 500
+  },
+  {
+    "id": "R04",
+    "group": "REJECT",
+    "title": "Kirik cam sise",
+    "shape": "broken_glass",
+    "nominal_capacity_ml": 0,
+    "target_diameter_mm": 61.0,
+    "target_height_mm": 197.3,
+    "total_mass_g": 160,
+    "empty_mass_g": 160,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "GLASS",
+    "tint": "amber",
+    "color": [
+      52,
+      121,
+      130
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "Kirli olmayan ancak kirik, keskin kenarli cam sise",
+    "mass_basis": "Estimated remaining fragment mass; not a measured specimen",
+    "dimensions_basis": "Designed damaged-container test geometry; no rated capacity",
+    "friction": 0.44999998807907104,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      61.0,
+      61.0,
+      197.25
+    ],
+    "mesh_vertices": 1056,
+    "mesh_polygons": 960,
+    "mass_kg": 0.16,
+    "blend": "blend/R04_broken_glass.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.09862597286701202
+    ],
+    "source_container_capacity_ml": 330
+  },
+  {
+    "id": "R05",
+    "group": "REJECT",
+    "title": "250 ml sivi kalan PET",
+    "shape": "water",
+    "nominal_capacity_ml": 500,
+    "target_diameter_mm": 65,
+    "target_height_mm": 210,
+    "total_mass_g": 266,
+    "empty_mass_g": 16,
+    "contents_mass_g": 250,
+    "contents_volume_ml": 250,
+    "material": "PET",
+    "tint": "clear",
+    "color": [
+      38,
+      152,
+      175
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "Bos degil: 250 ml su kalintisi, ilave 250 g",
+    "mass_basis": "16 g estimated empty bottle + 250 g water approximation (1 g/ml)",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.5,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      65.4,
+      65.4,
+      210.0
+    ],
+    "mesh_vertices": 10374,
+    "mesh_polygons": 10486,
+    "mass_kg": 0.26600000262260437,
+    "blend": "blend/R05_water.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.10499999672174454
+    ]
+  },
+  {
+    "id": "R06",
+    "group": "REJECT",
+    "title": "Asiri ezilmis aluminyum",
+    "shape": "crushed",
+    "nominal_capacity_ml": 330,
+    "target_diameter_mm": 84,
+    "target_height_mm": 43,
+    "total_mass_g": 13,
+    "empty_mass_g": 13,
+    "contents_mass_g": 0,
+    "contents_volume_ml": 0,
+    "material": "ALUMINUM",
+    "tint": "metal",
+    "color": [
+      188,
+      53,
+      42
+    ],
+    "expected_accept": false,
+    "expected_bin": "REJECT",
+    "rejection_reason": "Bu test politikasinda agir deformasyon / okunamaz etiket",
+    "mass_basis": "13 g, mass preserved from A03 before geometric crushing",
+    "dimensions_basis": "Generic approximate real-world format, not an exact commercial replica",
+    "friction": 0.5,
+    "restitution": 0.08,
+    "physics_basis": "Uncalibrated rigid-body test parameters; no deformation or fluid sloshing",
+    "reference_urls": [],
+    "test_policy": "Only empty registered intact PET/ALU/GLASS beverage containers are candidates. Expectations are test metadata, not classification inputs.",
+    "actual_dimensions_mm": [
+      84.0,
+      62.0,
+      43.0
+    ],
+    "mesh_vertices": 5196,
+    "mesh_polygons": 5074,
+    "mass_kg": 0.013000000268220901,
+    "blend": "blend/R06_crushed.blend",
+    "center_of_mass_local_m": [
+      0,
+      0,
+      0.0215000007301569
+    ]
+  }
+]

@@ -88,6 +88,9 @@ Windows, **Unity 6000.6.4f1**, **CODESYS V3.5 SP22 Patch 3 / Control Win V3 x64 
 | `simulasyon_unity/` | Köprü, sözleşme, testler ve güncel PLC ST kaynakları. |
 | `Codesys_Dosyalari/Paylasim/` | Temiz PLC projesi, paneli koruyan native uygulama aktarımı ve üretim betiği. |
 | `ModelKaynaklari/` | Ölçüm numunelerinin Blender kaynakları ve fiziksel referans değerleri. |
+| `24_farkli_test_objesi/` | 24 üründen oluşan test nesneleri: toplu Blender kataloğu, tekil modeller ve ölçü/kütle tablosu. |
 | `unity_icin_RVM_blender_denemesi/` | Makinenin Blender/FBX kaynakları. |
 
 Unity'de **RVM → Paylaşım projesini doğrula** menüsü sahne, kamera, tartı, prob ve numune referanslarını denetler. Python testleri paket kurallarını, yeniden bağlantı davranışını ve derlenmiş PLC sembollerini kontrol eder. Bu kontroller canlı PLC ile uçtan uca kabul testinin yerine geçmez.
+
+[24 test nesnesinin kullanımı](24_farkli_test_objesi/README.md): Blender dosyalarının dokuları gömülüdür. Bu ek model seti mevcut Unity/CODESYS sahnesine otomatik bağlanmaz; aktarım ve fizik/sensör ayarları hedef sahnede yapılır.
