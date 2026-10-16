@@ -1,17 +1,11 @@
 # Run using the CODESYS Scripting engine. No PLC connection or download is made.
-# Native application import preserves the operator panel, not personal device settings.
+# Native import preserves ST, Ladder networks and the operator panel.
 import os, io
 from scriptengine import *
 
 folder = os.path.dirname(os.path.abspath(__file__))
-root = os.path.dirname(os.path.dirname(folder))
-source = os.path.join(root, 'simulasyon_unity', 'plc')
 target = os.environ.get('RVM_CODESYS_OUTPUT', os.path.join(folder, 'RVM_Unity_Dijital_Ikiz_v106.project'))
 version = os.environ.get('RVM_DEVICE_VERSION', '3.5.22.30')
-
-def read(name):
-    with io.open(os.path.join(source, name + '.st'), encoding='utf-8-sig') as f:
-        return f.read()
 
 p = None
 try:
@@ -34,16 +28,9 @@ try:
         app.build_properties.compiler_defines = definitions.replace('VISU_USEPROPERTYINFO', '')
     else:
         app.build_properties.compiler_defines = [d for d in definitions if d != 'VISU_USEPROPERTYINFO']
-    for name in ['ST_RVMInput106', 'ST_RVMOutput106', 'ST_RVMOperator106', 'GVL_RVMUnity', 'GVL_RVMOperator', 'GVL_RVMKalici']:
-        app.find(name, False)[0].textual_declaration.replace(read(name))
-    for name in ['F_RVMPriority106', 'F_RVMMaterial106', 'FB_RVMControl106', 'PRG_UnityRVM']:
-        obj = app.find(name, False)[0]
-        obj.textual_declaration.replace(read(name + '_decl'))
-        obj.textual_implementation.replace(read(name + '_body'))
     task = p.find('AnaGorev', True)[0]
     if [task.pous[i][0] for i in range(len(task.pous))] != ['PRG_UnityRVM']:
         raise RuntimeError('Unexpected automation task calls.')
-    task.interval = 't#20ms'
     p.save()
     app.rebuild()
     app.generate_code()

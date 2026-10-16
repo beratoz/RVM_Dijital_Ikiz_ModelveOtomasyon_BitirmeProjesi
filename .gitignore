@@ -12,6 +12,8 @@
 !/Codesys_Dosyalari/Paylasim/RVM_Unity_Dijital_Ikiz_v106.plcopen.xml
 !/Codesys_Dosyalari/Paylasim/RVM_Unity_Dijital_Ikiz_v106.Device.Application.xml
 !/Codesys_Dosyalari/Paylasim/Application_v106.export
+!/Codesys_Dosyalari/Paylasim/PLC_Kaynaklari/
+!/Codesys_Dosyalari/Paylasim/README.md
 
 # Yalniz protokol 106 kaynaklari; yerel raporlar ve aday surum haric
 /simulasyon_unity/*
