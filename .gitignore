@@ -38,6 +38,10 @@
 [Bb]uilds/
 MemoryCaptures/
 Recordings/
+# Yerel deney kayitlari ve dogrulama raporlari (goruntuler/kaynak kopyalari dahil)
+Veriler/
+Dogrulama/
+05_Surum_ve_Dogrulama/
 .vs/
 .vscode/
 .idea/
@@ -71,6 +75,7 @@ Recordings/
 *.jsonl
 /Olcum_Testleri/
 /RVM_Deneysel_Olcum_v106_CALISMA/
+/Unity_RVM/
 .venv*/
 venv/
 __pycache__/

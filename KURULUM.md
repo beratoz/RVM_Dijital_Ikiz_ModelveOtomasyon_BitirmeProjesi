@@ -66,11 +66,11 @@ Unity henüz Play modunda değilken `connected: false` görülmesi beklenir; sa�
 ## 4. Unity
 
 1. Unity Hub'da **Add project from disk** ile `Unity/RVM` klasörünü seçin. Paketlerin indirilmesini ve içe aktarımın bitmesini bekleyin.
-2. `Assets/RVM/Scenes/RVM_InlineMeasurement_v106.unity` sahnesini açın. **RVM → Paylaşım projesini doğrula** menüsüyle kamera, tartı, prob ve fiziksel numune bağlantılarını kontrol edebilirsiniz. Eski `RVM_DigitalTwin.unity` sahnesi yeni sürümün çalıştırma sahnesi değildir; `RVM_MeasurementLab_v106.unity` bağımsız laboratuvardır.
-3. **Play** seçin. Boş istasyonun kamera kalibrasyonu tamamlanıp **PLC BAĞLI / VERİ GÜNCEL** ve protokol **106/106** göründüğünde **BAŞLAT**, ardından malzeme seçimi ve **NESNEYİ GİRİŞE KOY** ile çevrimi başlatın.
+2. `Assets/RVM/Scenes/RVM_InlineMeasurement_v106.unity` sahnesini açın. **RVM → Paylaşım projesini doğrula** menüsüyle sahneyi, 24 ürün kataloğunu ve ölçüm bağlantılarını kontrol edebilirsiniz.
+3. **Play** seçin. 24 modelin grafik hazırlığını ve boş istasyon kalibrasyonunu bekleyin. **PLC BAĞLI / VERİ GÜNCEL** ve protokol **106/106** göründüğünde **BAŞLAT**, ardından 24 ürün listesinden seçim ve **NESNEYİ GİRİŞE KOY** ile çevrimi başlatın.
 4. Hata sonrası nedeni kaldırın; sistemi durdurup gerekiyorsa nesneyi alın ve hazneyi başlangıca getirin. **RESET → BAŞLAT** ile devam edin.
 
-Normal kullanım için kaynakta yol düzenlemeniz gerekmez. İsteğe bağlı `RvmCommissioning` test bileşeninin `reportPath` alanı boşsa rapor Unity'nin o bilgisayardaki `Application.persistentDataPath` klasörüne yazılır; farklı konum isterseniz Inspector'dan kendi yolunuzu belirtin.
+Normal kullanım için kaynakta yol düzenlemeniz gerekmez. Deney kaydı `Application.persistentDataPath/Veriler`, Edit modu doğrulama raporları `Application.persistentDataPath/Dogrulama` altında oluşturulur. Kayıtlar görüntü, kaynak kopyası ve yerel sistem bilgileri içerebilir; otomatik Git paylaşımına dahil edilmez.
 
 ## Kaynaklardan PLC projesini yeniden üretme
 
@@ -85,7 +85,7 @@ $betik = (Resolve-Path 'Codesys_Dosyalari/Paylasim/create_project.py').Path
 & $codesysYolu '--profile=CODESYS V3.5 SP22 Patch 3' '--noUI' "--runscript=$betik"
 ```
 
-Betik mevcut proje dosyasının üzerine yazmaz. Derleme sonucu `build.log` dosyasındadır. Paneli de koruyan `Application_v106.export` dosyası yeni projeye aktarılır; ardından `simulasyon_unity/plc/` kaynakları uygulanır. `.plcopen.xml` dosyası metin kaynaklarını incelemek içindir; panelin eksiksiz taşınması için native `.export` kullanılır. Başka cihaz sürümü kullanacaksanız `RVM_DEVICE_VERSION` ortam değişkenini ayarlayıp uyumluluğu kendi kurulumunuzda kontrol edin.
+Betik mevcut proje dosyasının üzerine yazmaz. Derleme sonucu `build.log` dosyasındadır. Paneli ve Ladder/ST bloklarını koruyan `Application_v106.export` yeni projeye aktarılır. Güncel kaynak bu native aktarım ve hazır projedir; `simulasyon_unity/plc/` altındaki önceki sürüm uygulanmaz. `.plcopen.xml` dosyası kaynakları incelemek içindir. Başka cihaz sürümü kullanacaksanız `RVM_DEVICE_VERSION` ortam değişkenini ayarlayıp uyumluluğu kendi kurulumunuzda kontrol edin.
 
 Betiklerin dayandığı resmi API: [cihaz ekleme](https://forge.codesys.com/tol/scripting/snippets/13/), [kütüphane yönetimi](https://content.helpme-codesys.com/en/ScriptingEngine/ScriptLibManObject.html).
 
@@ -99,6 +99,6 @@ Git commit'inin yazar adı ve e-postası dosya içeriğinden bağımsızdır. Gi
 
 - CODESYS içindeki `VIS_RVMOperator104` adı önceki sürümden korunur; bu panel güncel `GVL_RVMOperator` değişkenlerini kullanır. Protokol sürümü panelin adından değil `GVL_RVMUnity.uiProtokolSurumu` alanından kontrol edilir: **106** olmalıdır.
 - Görselleştirme kütüphaneleri de gereklidir. Projeyi belirtilen CODESYS sürümünde açın; Library Manager içinde eksik bağımlılık kalmamalıdır. Native aktarımda standart CODESYS görselleştirme kaynaklarına ait kurulum yolları bulunabilir; bunlar kullanıcı hesabı veya kişisel dosya yolu değildir.
-- `ModelKaynaklari/physical_reference.json` numunelerin fiziksel kurulum referansıdır; PLC'ye tanıma sonucu olarak gönderilmez. Yeni numune için tek dinamik Rigidbody, gerçekçi collider, pozitif kütle ve `RvmConductiveBody` gerekir. Sahnedeki `RvmInlineMeasurement → Custom Prefab` alanına atayıp **Diğer** seçeneğiyle deneyebilirsiniz.
+- Güncel numuneler `Assets/RVM/Products24/Catalog.asset` içinde 24 prefab olarak listelenir. Yeni numune için tek dinamik Rigidbody, collider, pozitif kütle ve `RvmConductiveBody` gerekir; prefabı kataloğa ekleyin. Katalog kimliği ve beklenen malzeme, PLC'ye tanıma sonucu olarak gönderilmez.
 - Ölçüm yaşı, geçerlilik ve ürün/oturum eşleşmesi tutmazsa PLC kabul yapmaz. Kamera 4 saniyede tamamlanmazsa tanıma zaman aşımı oluşabilir; önce boş kalibrasyonu ve numune bağlantılarını kontrol edin.
-- `RvmEndToEndAcceptance` canlı test bileşeni normal sahnede etkin değildir. Yalnız kendi test PLC'niz hazırken ekleyin; `reportPath` boş bırakılırsa raporlar Unity'nin kullanıcı veri klasörüne yazılır.
+- Edit modu doğrulaması canlı PLC kabul testi değildir. Gerçek çevrimi kendi PLC/runtime kurulumunuzda ve boş istasyon kalibrasyonundan sonra ayrıca deneyin.

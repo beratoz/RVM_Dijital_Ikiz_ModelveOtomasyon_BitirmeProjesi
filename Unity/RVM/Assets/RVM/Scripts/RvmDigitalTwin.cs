@@ -15,11 +15,12 @@ namespace RVM
         public string bridgeUrl = "http://127.0.0.1:8766/exchange";
         public UnitySensors sensors = new UnitySensors();
         public PlcCommands plc = new PlcCommands();
-        public RvmVisionCamera vision;
         public RVM.Experimental.RvmInlineMeasurement inlineMeasurement;
         uint visionEpoch, visionRequest;
         public bool autoFeed; // Only inserts the selected physical specimen when PLC is ready.
-        public int selectedSpecimen = 1;
+        public int selectedSpecimen;
+        int pendingCatalogIndex = -1;
+        string[] catalogLabels;
         public bool linkLive;
         public string connectionMessage = "OPC UA bağlantısı bekleniyor";
         public string plantFault = "";
@@ -48,14 +49,16 @@ namespace RVM
             sensors.udiUnitySayaci = 1; sensors.udiGorulenPlcOturumu = 0;
             sensors.udiKomutKimligi = 0; sensors.uiOperatorKomutu = 0; sensors.uiOperatorParametresi = 0;
             sensors.udiNesneOnayi = 0; sensors.uiNesneSonucu = 0; sensors.udiNesneUrunKimligi = 0;
-            if(inlineMeasurement)inlineMeasurement.Cancel(); if(vision)vision.Cancel(); visionEpoch=visionRequest=0;
+            if(inlineMeasurement)inlineMeasurement.Cancel(); visionEpoch=visionRequest=0;
             commandPending = false; autoFeed = false; linkLive = wasLive = false; lastGood = -100;
+            pendingCatalogIndex = -1;
             operatorFeedback = "Yeni oturum; otomatik baslatma yok";
         }
 
         void Awake()
         {
             Application.runInBackground = true;
+            RVM.Experimental.RvmTezKaydi.Baslat();
             leftClosed = doorLeft.localRotation; rightClosed = doorRight.localRotation;
             shuttleHome = shuttle.position;
             sensors = new UnitySensors(); plc = new PlcCommands();
@@ -72,14 +75,21 @@ namespace RVM
         {
             while (enabled)
             {
+                if(!inlineMeasurement.ready) {
+                    connectionMessage=inlineMeasurement.status;
+                    yield return new WaitForSecondsRealtime(.1f);continue;
+                }
                 if (sensors.udiUnitySayaci == uint.MaxValue) BeginSession();
                 sensors.udiUnitySayaci++;
                 using (var request = new UnityWebRequest(bridgeUrl, "POST"))
                 {
-                    request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(sensors)));
+                    string sensorJson=JsonUtility.ToJson(sensors);
+                    RVM.Experimental.RvmTezKaydi.Ekle("http_gonderilen",sensorJson);
+                    request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(sensorJson));
                     request.downloadHandler = new DownloadHandlerBuffer();
                     request.SetRequestHeader("Content-Type", "application/json"); request.timeout = 2;
                     yield return request.SendWebRequest();
+                    RVM.Experimental.RvmTezKaydi.Ekle("http_yanit",JsonUtility.ToJson(new TezHttp {kod=request.responseCode,sonuc=request.result.ToString(),govde=request.downloadHandler.text,hata=request.error}));
                     if (request.result == UnityWebRequest.Result.Success)
                     {
                         BridgeReply reply = null;
@@ -93,6 +103,8 @@ namespace RVM
             }
         }
 
+        [Serializable] sealed class TezHttp {public long kod;public string sonuc,govde,hata;}
+        void OnDestroy() { RVM.Experimental.RvmTezKaydi.Kapat(); }
         void AcceptReply(BridgeReply reply)
         {
             var p = reply.plc;
@@ -112,11 +124,12 @@ namespace RVM
             if (!ValidCommands(p)) { FailPlant("Gecersiz PLC hareket parametresi"); lastGood=-100; return; }
             if (p.udiPlcSayaci != lastPlcCounter)
             { lastGood=Time.realtimeSinceStartup; lastPlcCounter=p.udiPlcSayaci; }
-            plc=p; connectionMessage="CODESYS / OPC UA / Protokol 106";
+            plc=p; RVM.Experimental.RvmTezKaydi.Ekle("plc_kabul_edilen",JsonUtility.ToJson(p)); connectionMessage="CODESYS / OPC UA / Protokol 106";
             if (sensors.udiKomutKimligi!=0 && p.udiKomutOnayi==sensors.udiKomutKimligi)
             {
                 operatorFeedback=CommandStatus(p.uiKomutDurumu)+" / "+CommandReason(p.uiKomutNedeni);
                 if(p.uiKomutDurumu>=2)commandPending=false;
+                if(p.uiKomutDurumu>=3)pendingCatalogIndex=-1;
             }
         }
         static bool Range(float v,float min,float max) => !float.IsNaN(v)&&!float.IsInfinity(v)&&v>=min-0.000001f&&v<=max+0.000001f;
@@ -132,7 +145,12 @@ namespace RVM
             bool allowed=inlineMeasurement&&inlineMeasurement.ready&&plc.uiDurum==10&&plc.xCalismaIzni&&plc.uiHataKodu==0&&!item&&
                 sensors.xYolBos&&sensors.xKapakKapali&&Mathf.Abs(shuttle.position.x-shuttleHome.x)<.008f&&
                 !sensors.xAcilStop&&!sensors.xSikisma&&plantFault.Length==0&&productCounter<uint.MaxValue;
-            if(allowed) CreateSpecimen(plc.uiNesneProfili);
+            if(allowed) {
+                int index=pendingCatalogIndex>=0 ? pendingCatalogIndex :
+                    inlineMeasurement.catalog ? inlineMeasurement.catalog.ProfileIndex(plc.uiNesneProfili,selectedSpecimen) : -1;
+                CreateSpecimen(index);
+            }
+            pendingCatalogIndex=-1;
             sensors.udiNesneOnayi=plc.udiNesneIstegi;
             sensors.uiNesneSonucu=allowed&&item?1:2;
             sensors.udiNesneUrunKimligi=allowed&&item?sensors.udiUrunKimligi:0;
@@ -155,7 +173,7 @@ namespace RVM
             if (plc.uiDurum == 10 && countedTotal != total)
             { lastCycleSeconds = Time.time - cycleStart; countedTotal = total; }
             if (autoFeed && linkLive && !commandPending && !plc.xNesneIstegiEtkin && plc.uiDurum == 10 && item == null && Time.time > nextFeed)
-            { InsertSpecimen(selectedSpecimen); nextFeed = Time.time + .1f; }
+            { InsertCatalogSpecimen(selectedSpecimen); nextFeed = Time.time + .1f; }
             if (tabletScreen)
                 tabletScreen.text = "RVM / DIGITAL TWIN\n" + (linkLive ? "PLC ONLINE" : "PLC OFFLINE") + "\n" +
                     StateName(plc.uiDurum) + "\nPET " + plc.udiPetSayaci + "   ALU " + plc.udiAluminyumSayaci + "   CAM " + plc.udiCamSayaci;
@@ -252,17 +270,25 @@ namespace RVM
 
         public void InsertSpecimen(int profile)
         {
-            if (!linkLive || plc.uiDurum != 10 || item || commandPending || plc.xNesneIstegiEtkin) return;
-            OperatorCommand(4,profile);
+            if(!inlineMeasurement||!inlineMeasurement.catalog)return;
+            InsertCatalogSpecimen(inlineMeasurement.catalog.ProfileIndex(profile,selectedSpecimen));
         }
-        void CreateSpecimen(int profile)
+        public void InsertCatalogSpecimen(int index)
+        {
+            if (!linkLive || plc.uiDurum != 10 || item || commandPending || plc.xNesneIstegiEtkin) return;
+            if(!inlineMeasurement||!inlineMeasurement.ready||!inlineMeasurement.catalog||index<0||index>=inlineMeasurement.catalog.entries.Length)return;
+            pendingCatalogIndex=index;
+            OperatorCommand(4,0); // Generic insertion request; catalog/class never sent to PLC.
+        }
+        void CreateSpecimen(int index)
         {
             inlineMeasurement.Cancel();
-            item=inlineMeasurement.Create(profile,new Vector3(-1.03f,1.20f,0));
+            item=inlineMeasurement.Create(index,new Vector3(-1.03f,1.20f,0));
             if(!item)return;
             normalScale=item.transform.localScale;
             productCounter++; if(productCounter==0)productCounter=1;
             sensors.udiUrunKimligi=productCounter;
+            RVM.Experimental.RvmTezKaydi.Urun(inlineMeasurement.catalog.entries[index].id,sensors.udiUnityOturumu,plc.udiPlcOturumu,productCounter,item.transform);
             crushElapsed=emptyElapsed=0; crushed=emptied=enteredCrusher=false; sensors.uiBosaltilanKutu=0;
             cycleStart=Time.time;
             UpdateSensors();
@@ -364,6 +390,8 @@ namespace RVM
             GUILayout.BeginArea(new Rect(width-410,12,398,Screen.height/scale-24),GUI.skin.box);
             tabletScroll=GUILayout.BeginScrollView(tabletScroll);
             GUILayout.Label("RVM • OPERATÖR TABLETİ",header);
+            GUILayout.Label(RVM.Experimental.RvmTezKaydi.Durum,label);
+            if(inlineMeasurement&&!inlineMeasurement.ready)GUILayout.Label(inlineMeasurement.status,label);
             GUI.contentColor=linkLive?new Color(.3f,1,.6f):new Color(1,.55f,.25f);
             GUILayout.Label(linkLive?"PLC BAĞLI / VERİ GÜNCEL":"PLC BAĞLANTISI YOK — HAREKET DURDU",label);
             GUI.contentColor=Color.white;
@@ -378,10 +406,18 @@ namespace RVM
             if(GUILayout.Button("RESET",GUILayout.Height(32)))OperatorCommand(3);
             GUILayout.EndHorizontal(); GUI.enabled=true;
             sensors.xAcilStop=GUILayout.Toggle(sensors.xAcilStop," ACİL STOP (simülasyon)");
-            GUILayout.Label("Fiziksel prefab secimi (sinif sonucu degil)",label);
-            selectedSpecimen=GUILayout.SelectionGrid(selectedSpecimen,new[]{"Diğer","PET","Alüminyum","Cam"},4);
+            GUILayout.Label("24 FİZİKSEL TEST ÜRÜNÜ",label);
+            var catalog=inlineMeasurement ? inlineMeasurement.catalog : null;
+            if(catalog && catalog.entries.Length>0) {
+                if(catalogLabels==null||catalogLabels.Length!=catalog.entries.Length)
+                    catalogLabels=Array.ConvertAll(catalog.entries,entry=>entry.id);
+                GUI.enabled=!item&&!commandPending&&!plc.xNesneIstegiEtkin;
+                selectedSpecimen=GUILayout.SelectionGrid(Mathf.Clamp(selectedSpecimen,0,catalog.entries.Length-1),catalogLabels,6);
+                GUI.enabled=true;
+                GUILayout.Label(catalog.entries[selectedSpecimen].id+" · "+catalog.entries[selectedSpecimen].title,label);
+            } else GUILayout.Label("Ürün katalogu eksik",label);
             GUI.enabled=inlineMeasurement&&inlineMeasurement.ready&&linkLive&&plc.uiDurum==10&&!item&&!commandPending&&!plc.xNesneIstegiEtkin;
-            if(GUILayout.Button("NESNEYİ GİRİŞE KOY",GUILayout.Height(30)))InsertSpecimen(selectedSpecimen);
+            if(GUILayout.Button("NESNEYİ GİRİŞE KOY",GUILayout.Height(30)))InsertCatalogSpecimen(selectedSpecimen);
             GUI.enabled=true; autoFeed=GUILayout.Toggle(autoFeed," Otomatik besle (aynı seçili nesne)");
             GUILayout.Space(6); GUILayout.Label("PLC KOMUTU → GERÇEK HAREKET",label);
             GUILayout.Label("Bant "+Bit(plc.xKonveyorIleri)+" / "+sensors.rGercekBantHizi.ToString("F2")+" m/s    Kırıcı "+Bit(plc.xKiriciCalis)+" / "+sensors.rGercekKiriciDevri.ToString("F0")+" rpm\nHazne "+plc.rHazneHedefi.ToString("F3")+" → "+sensors.rHazneKonumu.ToString("F3")+" m\nKapak "+Bit(plc.xKapakAc)+" / "+doorAngle.ToString("F0")+"°",label);

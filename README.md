@@ -4,6 +4,15 @@ PET, alüminyum ve cam ambalajları ölçerek ilgili toplama kutusuna yönlendir
 
 **v106**, kamera görüntüsü, temas tartısı ve sanal metal/manyetik probu aynı makine çevriminde birleştirir. Ambalajın seçilen etiketi PLC'ye tanıma sonucu olarak gönderilmez; PLC ham ölçümleri değerlendirir.
 
+## Güncel Unity sürümünde eklenenler
+
+- Önceki üç temel numunenin yerine **24 ürünlük prefab kataloğu** ve operatör ekranından ürün seçimi: 6 PET, 6 alüminyum, 6 cam ve 6 farklı kabul edilmeme senaryosu.
+- İlk ölçümden önce 24 model için siyah/beyaz render hazırlığı ve boş istasyon kalibrasyonu.
+- Piksel silueti, bölgesel ve kantil tabanlı optik hesaplar; kontur ve kabuk göstergelerinin deneysel gözlemi. Varsayılan optik koşul yarım ışık (`B_yari_isik`). Malzeme kararını PLC verir.
+- HTTP paketleri, sensör ölçümleri, ham görüntüler ve kaynak özeti için yerel deney kaydı. Kayıtlar `Application.persistentDataPath/Veriler` altında tutulur.
+
+Protokol **106** ve HTTP/OPC UA bağlantı yapısı korunur. Yeni paket, eski bağımsız laboratuvar ve sahne üretme araçlarının yerine güncel ana sahneyi ve 24 ürün kataloğunu içerir.
+
 ## Mimari ve veri akışı
 
 ```mermaid
@@ -26,7 +35,7 @@ flowchart LR
 1. Operatör nesne ekleme isteği gönderir. PLC'nin numune isteğini Unity karşılar ve oluşturduğu ürün kimliğini onaylar.
 2. Konveyör ambalajı tanıma bölgesine getirir. Nesne, PLC tanıma onayı gelene kadar durdurucuda tutulur.
 3. Aynı ambalaj temas tartısına oturur; kamera siyah/beyaz arka planla ölçüm alır ve sanal prob örneklenir.
-4. Ham ölçümler ürün, istek ve oturum kimlikleriyle PLC'ye iletilir. `F_RVMMaterial106` bunlardan malzeme kodunu belirler.
+4. Ham ölçümler ürün, istek ve oturum kimlikleriyle PLC'ye iletilir. `FB_MalzemeSiniflandirma106` bunlardan malzeme kodunu belirler.
 5. Kabul edilen ambalaj kırma/ezme bölümüne taşınır. Hazne hedef kutuya gider, kapaklar açılır, boşaltma doğrulanır ve sayaç artırılır.
 6. Hazne başlangıca döner. Tanınmayan veya kabul edilmeyen nesne ters bantla iade edilir.
 
@@ -76,7 +85,7 @@ Windows, **Unity 6000.6.4f1**, **CODESYS V3.5 SP22 Patch 3 / Control Win V3 x64 
    ```
 
 3. Unity Hub'a `Unity/RVM` klasörünü ekleyin. **`Assets/RVM/Scenes/RVM_InlineMeasurement_v106.unity`** sahnesini açıp Play seçin.
-4. Kalibrasyon tamamlanıp bağlantı yeşile döndüğünde **BAŞLAT** ve **NESNEYİ GİRİŞE KOY** ile çevrimi deneyin. Sonraki açılışlarda `Baslat_v106.cmd` köprüyü başlatabilir.
+4. Grafik hazırlığı ve kalibrasyon tamamlanıp bağlantı yeşile döndüğünde **BAŞLAT** seçin. **24 FİZİKSEL TEST ÜRÜNÜ** listesinden bir ürün seçip **NESNEYİ GİRİŞE KOY** ile çevrimi deneyin. Sonraki açılışlarda `Baslat_v106.cmd` köprüyü başlatabilir.
 
 [KURULUM.md](KURULUM.md) kendi Python yolu, OPC UA hesabı/sertifikaları, hata giderme ve CODESYS projesini yeniden üretme adımlarını açıklar. Parolalar ve yerel ayarlar Git'e dahil edilmez.
 
@@ -84,8 +93,8 @@ Windows, **Unity 6000.6.4f1**, **CODESYS V3.5 SP22 Patch 3 / Control Win V3 x64 
 
 | Klasör | İçerik |
 |---|---|
-| `Unity/RVM/` | Ana v106 sahnesi, bağımsız ölçüm laboratuvarı, numuneler ve C# kaynakları. |
-| `simulasyon_unity/` | Köprü, sözleşme, testler ve güncel PLC ST kaynakları. |
+| `Unity/RVM/` | Güncel ana sahne, 24 ürün prefabı, görüntü/ölçüm işleme ve C# kaynakları. |
+| `simulasyon_unity/` | Köprü, sözleşme, testler ve önceki PLC ST kaynakları. Güncel PLC uygulaması `Codesys_Dosyalari/Paylasim/` içindedir. |
 | `Codesys_Dosyalari/Paylasim/` | Temiz PLC projesi, paneli koruyan native uygulama aktarımı ve üretim betiği. |
 | `ModelKaynaklari/` | Ölçüm numunelerinin Blender kaynakları ve fiziksel referans değerleri. |
 | `24_farkli_test_objesi/` | 24 üründen oluşan test nesneleri: toplu Blender kataloğu, tekil modeller ve ölçü/kütle tablosu. |
@@ -93,4 +102,4 @@ Windows, **Unity 6000.6.4f1**, **CODESYS V3.5 SP22 Patch 3 / Control Win V3 x64 
 
 Unity'de **RVM → Paylaşım projesini doğrula** menüsü sahne, kamera, tartı, prob ve numune referanslarını denetler. Python testleri paket kurallarını, yeniden bağlantı davranışını ve derlenmiş PLC sembollerini kontrol eder. Bu kontroller canlı PLC ile uçtan uca kabul testinin yerine geçmez.
 
-[24 test nesnesinin kullanımı](24_farkli_test_objesi/README.md): Blender dosyalarının dokuları gömülüdür. Bu ek model seti mevcut Unity/CODESYS sahnesine otomatik bağlanmaz; aktarım ve fizik/sensör ayarları hedef sahnede yapılır.
+[24 test nesnesinin Blender kaynakları](24_farkli_test_objesi/README.md) ayrı olarak bulunur. Güncel Unity sahnesinde 24 ürünün prefab karşılıkları `Assets/RVM/Products24/` üzerinden kataloğa bağlanmıştır.
